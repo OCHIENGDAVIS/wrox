@@ -1,0 +1,56 @@
+body{
+    text-align: center;
+}
+#logo{
+    color: steelblue;
+}
+ul{
+    display: flex;
+    justify-content: center;
+}
+ul li{
+    list-style-type: none;
+    padding-left: 20px;
+
+}
+ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-style: italic;
+}
+ul li a:hover{
+    color: green;
+}
+.errorMessage{
+    color: red;
+    display: none;
+}
+#valid{
+    display: none;
+    color: red;
+}
+#invalid{
+    display: none;
+    color: red;
+}
+#text{
+    font-size: 20px;
+    font-weight: bold;
+}
+button{
+    padding: 10px 15px;
+    border: none;
+    font-size: 20px;
+    background-color: steelblue;
+    margin : 10px 0;
+    color: #fff;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(15, 93, 156);
+    cursor: pointer;
+}
+#some-text{
+    color: rgb(20, 58, 88);
+    font-size: 40px;
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Maximillian</title>
+</head>
+<body>
+    <div class="container">
+    <script type="text/javascript">
+
+
+        // EVEN AND ODD NUMBERS
+
+
+        // document.write('<h1>EVEN - ODD Number Detector</h1>')
+        // let number = 12
+        // if(number % 2 == 0 && number > 0){
+        //     console.log('Number is even And Positive')
+        // }
+        // else{
+        //     console.log('Number is odd!!')
+        // }
+        // number  = Number(prompt("enter a number Here"))
+        // if(number < 0 ){
+        //     console.log('NEGATIVE')
+        // }
+        // else if(number === 0){
+        //     console.log("None of the two")
+        // }
+        // else{
+        //     console.log('POSITIVE')
+        // }
+
+
+        // DAYS OF THE WEEk
+
+
+        // let dayOfWeek = prompt('Enter the Day of the Week!!!')
+        // switch(Number(dayOfWeek)){
+        //     case 1 : 
+        //             console.log('Monday')
+        //             console.log("Aday to just drind at the office")
+        //             break
+        //     case 2 : console.log('Tues1day')
+        //              break
+        //     case 3 : console.log('Wednesday')
+        //              break
+        //     case 4 : console.log('Thursday')
+        //              break
+        //     case 5 : console.log('Friday')
+        //             break
+        //     case 6 : console.log('Saturday')
+        //              break
+        //     case 7 : console.log('Sunday')
+        //             break
+        //     default : console.log('Input not recognised!')
+
+        // }
+ 
+    </script>
+    <header>
+        <div>
+            <h1 id="logo">SUPER GOOD LOGO</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Community</a></li>
+                <li><a href="">Contact</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <div>
+                <h1 id="info">Let's See what Js Can do!</h1>
+                <div id="result">
+                    <button onclick="btnClick(); clicked()">Click Me!</button>
+                </div>
+            </div>
+            <input type="text" id="text1" placeholder="Enter Your Name"> <br> <br> 
+            <input type="password" placeholder="Your password" id="password">
+            <button id="submit-name" onclick="handleName()">Submit</button>
+            <h1>Your Preffered language</h1>
+            <input type="radio" value="Javascript" name='language' id="js"> Javascript <br>
+            <input type="radio" value="python" name='language' id="python"> Python <br>
+            <button onclick="handleLanguage()">Submit</button> 
+
+            <h2>A bunch of select items</h2>
+            <select name="iniversity" id="university">
+                <option value="mmu">Multimedia university of Kenya</option>
+                <option value="uon">Univeristy of Nairobi</option>
+                <option value="jkuat">Jomo Kenyatta (JKUAT)</option>
+                <option value="KU">Kenyatta university</option>
+            </select>
+            <button onclick="handleUni()">Submit</button>
+
+            <h2>Get Element By their Tag Name</h2>
+            <p>paragrah one is here</p>
+            <p class="green">paragrah one is here</p>
+            <p>paragrah one is here</p>
+            <p class="green">paragrah one is here</p>
+            <button onclick="handleStyle()">Change the style</button>
+            <h2>Lets See what images can do?</h2>
+            <img src="./img/laptop-2838914_1920.jpg" alt="" width="300px" id="image" onmouseover="handleImage()" onmouseout="setOldImage()">
+
+        </section>
+        <section>
+            <h1>Form Validation with JS</h1>
+            <form action="" >
+                <p>
+                    <input type="email" placeholder="email" id="email"> <br>
+                    <span class="errorMessage">*Email Cannot be empty*</span>
+                </p>
+                <p>
+                    <input type="password" id="pass" placeholder="Password"> <br>
+                    <span class="errorMessage">*Password cannot be empty*</span>
+                </p>
+                <p>
+                    <input type="button" value="Send" onclick="validateForm()">
+                </p>
+            </form>
+        </section>
+        <section>
+            <h2>Regular Expression in the air</h2>
+            <p>
+                <input type="text" placeholder="username" id="uname">
+            </p>
+            <span id="invalid">Invalid</span>
+            <span id="valid">Valid</span>
+            <p>
+                <button onclick="handleRegular()">Submit</button>
+            </p>
+        </section>
+        <section>
+            <h2>Javascript Timing Events </h2>
+            <button onclick="handleStart()">start</button> <br>
+            <p id="some-text">Some Text</p>
+            <button onclick="handleEnd()">End</button> <button onclick="animate()">Start Animation</button>
+        </section>
+    </main>
+</div>
+    
+
+    <script src="./js/index.js"></script>
+</body>
+</html>
