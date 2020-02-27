@@ -185,3 +185,12 @@ const starter = ()=>[
 const animate = ()=>{
     setInterval(starter, 100)
 }
+function sayHi(name, message){
+    console.log(arguments)
+    return 'Hi ' + name + ', ' + message
+}
+const sayThanks = ()=>{
+    console.log(arguments)
+    return 'thankyou'
+}
+console.log(sayHi('davis', 'how are you'))
