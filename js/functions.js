@@ -53,3 +53,58 @@ Person.prototype.sayName = function (){
 let person1 = new Person()
 console.log(person1.sayName())
 console.log(person1.hasOwnProperty('name'))
+console.log('This is the beginning w3shool js........')
+function muFunc(){
+    return this
+}
+console.log(muFunc())
+let myObject = {
+    firtName : 'Davis',
+    lastName : 'Ochieng',
+    fullName : function(){
+        // return this.firtName + ' ' + this.lastName
+        return this
+    }
+}
+console.log(myObject.fullName())
+let people = {
+    fullName : function(city, country){
+        return this.firstName + ' ' + this.lastName + ", " + city + " " + country
+    }
+}
+
+let people1 = {
+    firstName : 'JOB',
+    lastName : 'Monk'
+
+}
+let person2 = {
+    firstName : 'Mary',
+    lastName : 'Gold'
+}
+
+console.log(people.fullName.apply(people1, ['Oslo', 'Norway']))
+console.log(people.fullName.apply(person2, ['Nairobi', 'Kenya']))
+console.log(Math.max.apply(null, [1,2,43]))
+// initialize the counter
+let counter = 0;
+function increment(){
+     counter +=1
+}
+
+// call add() 3 times
+increment()
+increment()
+increment()
+console.log(counter, 'Afet increasing....')
+function add(){
+    let counter = 0
+    function plus(){
+        counter +=1
+    }
+    plus()
+    return counter
+}
+
+
+
