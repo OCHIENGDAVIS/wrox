@@ -1,8 +1,8 @@
 console.log('Functions are here')
 // eval('alert("hello world")') 
-function sayColor(){
-    alert(window.color)
-}
+// function sayColor(){
+//     alert(window.color)
+// }
 // window.sayColor()
 console.log(Math.E)
 console.log(Math.LN10)
@@ -105,6 +105,28 @@ function add(){
     plus()
     return counter
 }
+let p = document.getElementById('demo')
+p.setAttribute('class', 'redd')
+p.innerHTML = 'hello world'
+let demo = document.getElementById('demo-btn')
+demo.setAttribute('class', 'redd')
+console.log(demo.hasAttribute('class'))
+document.write(Date())
+function randomClick(){
+    let btn = document.getElementById('pipe').innerHTML = 'going a way!!'
+}
+function moreEvent(){
+    let btn = document.getElementById('pipe').addEventListener('click', ()=>{
+        this.innerHTML = 'Bye Bye'
+    })
+}
+function lastEvent(){
+    let btn  = document.getElementById('pipe')
+    btn.addEventListener('click',function(){
+        this.style.color = 'green'
+    } )
+}
+
 
 
 

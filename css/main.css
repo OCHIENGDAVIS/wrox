@@ -55,5 +55,8 @@ button:hover{
     font-size: 40px;
 }
 hr{
-    padding-top: 100px ;
+    padding-top: 30px ;
+}
+.redd{
+    color: red;
 }
