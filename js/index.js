@@ -193,4 +193,186 @@ const sayThanks = ()=>{
     console.log(arguments)
     return 'thankyou'
 }
-console.log(sayHi('davis', 'how are you'))
+
+
+
+
+function displayInfo(){
+    //code will go here
+}
+let obj = {}
+
+let array = new Array('red', 'green', 'yellow', 'white', 'purple', 'gray', 'rgb')
+console.log(array.length)
+if (array instanceof Array){
+    console.log("An array was found")
+}
+else{
+    console.log('Nothinf resembling an array has been found in the site')
+}
+if(Array.isArray(array)){
+    console.log("an Array has been founf in the app")
+}
+else{
+    console.log('Nothing like an array has been seen her ')
+}
+console.log(array.toString())
+console.log(obj.toString())  
+console.log(array.valueOf() + ' From the array')
+
+console.log(array.join(' | '))
+obj.name = 'ochieng'
+obj.lname = 'ogori'
+obj.mname = 'ondoro'
+let values = [0, 1, 5, 10, 15]
+function compare(value1, value2){
+    if(value1 < value2){
+        return -1
+    }
+    else if(value2 < value1){
+        return 1
+    }
+    else{
+        return 0
+    }
+}
+console.log(values.sort(compare))   
+let newValues = values.concat('one', 'two', 'three', 'four', 'five')
+console.log(newValues)
+console.log(values)
+console.log('Before splicing......')
+console.log(values)
+console.log(values.splice(1 , 1, 'red', 'green'))
+console.log('After splicing tha array....')
+console.log(array) 
+console.log(array.indexOf('purple'))
+console.log(array.lastIndexOf('purple'))
+
+console.log('Dealing with the every() array method.....')
+
+let numbers = [1,2,3,4,5,6,7,8,9,10]
+let divisible = numbers.every((item)=>{
+    return item % 2 === 0 
+})
+console.log(divisible)
+console.log('Dealing with the some() array method.....')
+let someDivisible = numbers.some((item)=>{
+    return item % 2 === 0
+})
+console.log(someDivisible)
+
+console.log('Dealing with filter() array method.....')
+let filterDivisible = numbers.filter((item)=>{
+    return item % 2 == 0
+})
+console.log(filterDivisible)
+console.log('Dealing with the map() array method......')
+
+let mapDivisible = numbers.map(function(item){
+    return item **2
+})
+console.log(mapDivisible)
+console.log('Reduction array methods.....')
+let sum = numbers.reduce(function(prev, current, index, array){
+    console.log(index)
+    console.log('First round')
+    console.log(array)
+    return prev + current
+})
+console.log(sum)
+console.log('The manual sumManual() function ......')
+function sumManual(arr){
+    let result = 0
+    arr.forEach((item)=>{
+        return result += item
+    })
+    return result
+}
+console.log(sumManual(numbers))
+
+console.log('Dealing with Dates in javascript.......')
+let now = new Date()
+console.log(now)
+
+let someDate = new Date(Date.parse('May 25, 2004'))
+console.log(someDate)
+someDate = new Date(Date.UTC(2000, 2 ))
+console.log(someDate.getMilliseconds())
+let date1 = new Date(2007, 0, 1)
+let date2 = new Date(2007, 1, 1)
+console.log(date1 < date2)
+console.log(date2 > date1)
+console.log(date1.getTime())
+console.log('before adding several milliseconds')
+console.log(date1)
+date1.setMilliseconds(122322232)
+console.log('After adding several milliseconds')
+console.log(date1)
+console.log(date1.getFullYear())
+console.log('Welcome to the world of regular Expressions......')
+console.log('Welcome to the world of Functions Now......')
+
+
+let pattern1 = new RegExp('/at/g')
+let text = 'at the end is the beginning'
+let anotherSum = function(num1, num2){
+    return num1 + num2
+};
+
+console.log(anotherSum(2,4))
+const sumAgain = anotherSum
+console.log(sumAgain(4,8))
+anotherSum = null
+console.log(sumAgain(2,8))
+function addNumber(num){
+    return num + 100
+}
+function addNumber(num){
+    return 200 + num
+}
+console.log(addNumber(100))
+function callSomeFunction(someFunction, someArguments){
+    return someFunction(someArguments)
+}
+function add(num1, num2){
+    return num1 + num2
+}
+let response = callSomeFunction(addNumber, 12)
+console.log(response)
+
+let data = [
+    {
+        name : 'Davis',
+        age : 25
+    },
+    {
+        name : 'nicholas',
+        age : 30
+    }
+]
+function createComparisonFunctipn(propertyName){
+    return function (obj1, obj2){
+        let var1 = obj1[propertyName]
+        let var2 = obj2[propertyName]
+        if(var1 < var2){
+            return -1
+        }
+        else if(var2 < var1){
+            return 1
+        }
+        else{
+            return 0
+        }
+
+    }
+}
+console.log(data.sort(createComparisonFunctipn('name'))[0])
+
+function sub(num1, num2){
+    return num1 - num2
+}
+function callSub(){
+    return sum.apply(this, arguments)
+}
+
+console.log(sub.caller)
